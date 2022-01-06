@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --background-color: hsl(250, 20%, 10%);
+  --link-color: hsl(40, 100%, 50%);
+  --link-color-hover: hsl(40, 100%, 70%);
+}
+
+body {
+  background-color: var(--background-color);
+  transition: background-color 0.25s ease-in;
+  color: white;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 1rem;
+  gap: 2rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--link-color-hover);
+}
+
+nav {
+  justify-self: right;
+  padding: 0.5rem;
+}
+
+@media only screen and (max-device-width: 480px) {
+  #root {
+    min-height: 95vh; /* Fuck mobile browsers, all my homies hate mobile browsers */
+  }
+}
